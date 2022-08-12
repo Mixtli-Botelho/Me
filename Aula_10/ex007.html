@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador AULASEVEN</title>
+    <style>
+    body{
+        text-align: center;
+        font: normal 11pt Arial;
+
+    } 
+    h1#SV{
+        width: 50px center;
+        line-height: 50px;
+        background: gray;
+        
+    }
+    input{
+        font: normal 10pt Arial;
+        width: 90px;
+        background-color: gainsboro;}
+
+    h3#Serv{
+        background-color: gray;
+        color: black
+    }
+    h3#VL{
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    div#res{
+        background-color: black;
+        margin-top: 20px;
+        color: brown;
+        
+    }
+    
+
+    </style>
+</head>
+<body>
+    <h1 id="SV">Somando Valores</h1>
+    <h3 id="Serv">Servimos simplesmente com o intuito<p>
+        de ajudar a somar valores em suas <p><strong>"vidas"</strong>
+    </h3>
+    <h3 id="VL">Vamos lá!</h3>
+    <input type="number" name="txtn1" id="txtn1"> 
+    <strong>+</strong>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+
+        <div id="res"><strong>Total</strong></div>
+
+    <script>
+        function somar(){
+            var tn1=document.getElementById('txtn1')
+            var tn2=document.querySelector('input#txtn2')
+            var res=document.querySelector('div#res')
+            var n1=Number(tn1.value)
+            var n2=Number(tn2.value)
+            var s=n1+n2
+            res.innerHTML=`<strong>A soma de ${n1} e ${n2} é igual a ${s}<strong>`
+
+        }
+
+    </script>
+    
+</body>
+</html>

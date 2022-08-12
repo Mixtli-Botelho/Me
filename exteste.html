@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <style>
+        body{
+            background: cornflowerblue;
+            font: normal 15pt arial;}
+        div#ES{
+            background: rgb(128, 128, 128);
+            color: aliceblue;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h5>-- NAO COMPARTILHADO NA EXPORTACAO, e usado para substituir chaves ausentes em outras traducoes
+        --
+        -- A sintaxe deste arquivo e assim:
+        -- chave::traducao
+        -- Nao altere a chave ou a traducao nao sera usada.
+        -- Algumas traducoes usam tags \'$N\' para sinalizar que um elemento variavel e usado la. Por exemplo, com \"add_piece::Add $0 $1s\", o resultado no jogo pode ser \"Add 2 peoes\", dependendo do que o jogo precisa. Por favor, preserve essas tags nas traducoes.
+        -- Algumas traducoes usam o \'|\' caractere para sinalizar uma quebra de linha. Por favor, preserve-os tambem.
+        -- O jogo suporta apenas caracteres ASCII por enquanto, entao voce deve evitar caracteres acentuados, eles nao serao renderizados.
+        -- As linhas que comecam com \'--\' sao ignoradas ao carregar este arquivo, entao voce pode usar isso para adicionar comentarios.
+        --
+        -- Obrigado por nos ajudar a tornar o jogo acessivel a mais jogadores!
+        
+        -- MENU
+        play::iniciar
+        options::configure
+        credits::creditos
+        quit::sair
+        back::voltar
+        throne::trono
+        endless::infinito
+        resign::desistencia
+        
+        click_start::click iniciar
+        best_floor::completos:
+        completed::completo!
+        avenged::vingado!
+        exorcised::exorcisado!
+        best_time::melhor tempo
+        throne_desc::throne mode|Recupere seu trono alcancando o 12º andar da torre principal do castelo
+        endless_desc::tsukuyomi mode|Suba uma masmorra sem fim, preso em um tsukuyomi infinito
+        credit_ben::code / gfx / sfx / gamedesign:
+        credit_remy::sugar engine / narrative / shader:
+        credit_penta::music:
+        partners::chefes parceiros
+        
+        -- INGAME
+        floor_::andar:
+        poison::veneno
+        power::poder
+        range::alcance
+        f_arc::f.arco
+        knock::bater
+        pierce::perfurar
+        turn_::turn:
+        dif_::dif:
+        mode_::mode:
+        unsafe_mode::unsafe_mode
+        checkmate::perdemo
+        try_again::mais uma
+        yes::sim
+        no::nou
+        blood_bowl::Tigela de Sangue|Todas as pecas brancas ganham +1 de vida
+        pawns_join::dois peoes se juntam ao exercito branco
+        piece_join::um $0 se junta ao exercito branco
+        click_to_use::Clique para usa-lo
+        replenish_floor::Reabastecer no proximo andar
+        folly_shield::Escudos da Loucura|Proteja voce de seus instintos suicidas|Recarregue a cada turno
+        soul_desc::Alma de $0 | Use-a para se mover como um $0
+        crow_turn::entao, jogue um turno extra
+        soul_slot::Um slot de alma | Derrote um oponente nobre para roubar sua alma
+        already_loaded::A espingarda ja esta carregada!
+        not_target_wrath::Nenhum alvo valido para Furia!
+        cant_move::Voce nao pode se mover!
+        reload_shotgun_desc::Clique para carregar $0 $1s em sua espingarda
+        shell::concha
+        game_over::Fim de jogo
+        no_ammo_left::Nenhuma bala restante
+        no_shell_loaded::Nenhuma concha carregada
+        scope_on::o escopo ja esta ativado
+        card_exhausted::Este cartao esta esgotado
+        card_wait_floor::Voce nao pode usa-lo ate o proximo andar
+        heir::herdeiro
+        extra_turn::turno extra
+        
+        -- EMOTES
+        promote::promover
+        knight_guard::guarda
+        black_bishop_warcry:justica!
+        castle::castelo
+        backup::salvamento
+        
+        -- CARDS NAME
+        Ermine Belt::Cinto de Arminho
+        Elite Gem::Gema de Elite
+        Extra Barrel::Barril Extra
+        Royal Loafers::Mocassins Reais
+        Majestic Censer::Incensario Majestoso
+        Sacred Crown::Coroa Sagrada
+        Blunderbuss::Bacamarte
+        Engraved Scope::Escopo Gravado
+        Holy Gunpowder::Polvora Sagrada
+        Ritual Dagger::Adaga Ritual
+        August Presence::Presenca de agosto
+        Crow\'s Blessing::Bencao do Corvo
+        The Moat::O fosso
+        Rightful Curtsy::Reverencia Legal
+        Wand of Downpour::Varinha da Chuva
+        Wand of Frenzy::Varinha do Frenesi
+        Wand of Wrath::Varinha da Ira
+        Wand of Wings::Varinha das Asas
+        Wand of Gust::Varinha de rajada
+        Kingdom Wealth::Riqueza do Reino
+        Gradual Absolution::Absolvicao Gradual
+        Taunting Hop::Pulo Provocador
+        Unfaithful Steed::Corcel infiel
+        Unjust Decree::Decreto injusto
+        Kingly Alms::Esmola Real
+        Subtle Poison::Veneno Sutil
+        Small Fry Harvest::Colheita de alevinos
+        A Piercing Truth::Verdade penetrante
+        Black Mist::Nevoa obscura
+        King\'s Shoulders::Ombros do Rei
+        High Focus::Foco alto
+        Courteous Jousting::Justa Cortes
+        Cornered Despot::Despota encurralado
+        
+        Backups::Salvamentos
+        Cavalry::Cavalaria
+        Conclave::Conclave
+        Entitle::Direito
+        Cardinal::Cardeal
+        Remparts::Remparts
+        Pillage::Pilhagem
+        Crusades::Cruzadas
+        Peace::Paz
+        King\'s Mistress::Amante do Rei
+        Revolution::Revolucao
+        Bodyguard::Escolta
+        Ruins::Ruinas
+        Assault::Assalto
+        Kite Shield::Escudo de pipa
+        Zealots::Zelotes
+        Militia::Milicia
+        Ammunition Depot::Deposito de balas
+        Scouting::Escotismo
+        Pikemen::Piqueiros
+        Ascension::Ascensao
+        Castle::Castelo
+        Conscription::Recrutamento
+        Theocracy::Teocracia
+        Iron Maiden::Dama de Ferro
+        Court of the King::Court of the King
+        The Red Book::Corte do Rei
+        Homecoming::Regresso a casa
+        Overthrown Theocracy::Teocracia derrubada
+        Saboteur::Sabotador
+        Lookout Tower::Torre de vigia
+        Throne Room::Sala do trono
+        The Secret Heir::Herdeiro Secreto
+        Genderqueer::Nao Binary
+        
+        -- CARDS DYNAMIC
+        rem_piece::Remover $0 $1s
+        add_piece::Adicionar $0 $1s
+        at_delay::no inicio do turno $0
+        ammo_max::balas cheias
+        ammo_regen::reposicao de balas
+        firepower::poder de fogo
+        firerange::alcance de fogo
+        hp::vida
+        queen_escape::Voce nao pode escapar dela...
+        queen_everywhere::... Ela esta em toda parte!
+        flip_on::Virada de cartao
+        every_x_turn::cada $0 voltas
+        
+        effect_chamber_max::Cobrar $0 de cartuchos adicional em sua espingarda
+        effect_soul_slot::Adicione $0 slots de alma extra
+        effect_soul_sink::Remova 1 slot de alma
+        effect_crown::Voce pode jogar um turno extra depois de usar uma carta de alma
+        effect_presence::Pecas que nao sejam do Rei nao podem chegar perto do seu Rei
+        effect_moat::Pecas que nao sejam Cavaleiro nao podem cruzar o fosso em um movimento
+        effect_hp::$0: $2 vida
+        effect_hprc::$0: $1% vida
+        effect_tempo::$0: $2 velocidade
+        effect_shell::Ganhe $1 de municao cada vez que matar um $0
+        effect_poison::$0\'s Limite de movimentos: 1 quadrado para $1 turnos
+        effect_cage::Movimentos de $0 sao limitados a $1 quadrado
+        effect_shield::$0s tem um escudo que absorve todos os danos em um unico turno
+        effect_flying::$0s podem passar por qualquer obstaculo
+        effect_castle::Posicao de troca do lider com $0 sempre que ele sofrer dano
+        effect_iron::$0s nao podem morrer
+        effect_orth::$0s pode se mover (nao atacar) ortogonalmente
+        effect_joust::Jogue um turno extra ao matar um $0
+        
+        effect_bodyguard::Lider nao pode ser morto se um $0 estiver vivo
+        effect_knockback::+$0%chance de repelir o inimigo
+        effect_spread::arco de fogo: $1$
+        effect_absolution::$1 Poder de fogo para cada slot de alma vazio
+        effect_hop::Voce pode pular sobre uma peca proxima negociando $ 0 dmg
+        effect_steed::move $0 movimento adicional por alma de cavaleiro possuida
+        effect_pierce::Suas balas atravessam alvo(s) de $0
+        effect_mist::Protege voce da morte uma vez por andar
+        effect_grab::Uma vez por andar, levante uma peca que nao seja do rei em seu caminho sem terminar seu turno
+        effect_assault::Os peoes podem andar 2 casas em seu primeiro movimento
+        effect_militia::Os peoes podem se mover/atacar em quatro direcoes
+        effect_pikemen::Os peoes podem atacar nas duas primeiras casas a sua frente
+        effect_theocracy::Ganhe se todos os bispos estiverem mortos
+        effect_bad_shells::Arco de disparo duplo por bala de $0
+        effect_alarm::Salvamentos chegam a $0 por turno mais cedo
+        effect_heir::Um peao e o herdeiro secreto. O herdeiro substitui o rei se ele morrer
+        effect_nothing::Sem modificadores
+        
+        -- CONDITIONS
+        cond_if::if
+        cond_because::porque
+        cond_contact::
+        uma peca e adjacente a voce
+        cond_inner::seu Rei nao esta na borda do tabuleiro
+        
+        -- SPECIALS
+        special_strafe::Strafe mode: Click com o direito em um alvo e dispare em seu proximo movimento
+        special_scope::Right click:arco -45$ e alcance +1. Este bonus e redefinido a cada movimento ou recarga
+        special_decree::O Rei pode descarregar a arma em um tiro apenas
+        special_grenade::Clique com o botao direito para lancar uma granada|custa 2 projeteis
+        
+        -- WANDS
+        wand_0::Cause $0 de dano em inimigos aleatorios
+        wand_1::Repoe suas balas e recarregue sua arma
+        wand_2::Cause $0 de dano a um alvo que nao seja o Rei
+        wand_3::Mova ate $0 quadrados em qualquer lado
+        wand_4::Repelir todas as pecas brancas para o norte
+        
+        -- OPTIONS
+        music::musica
+        sfx::sfx
+        fullscren::tela cheia
+        crt::crt
+        speedrun::speedrun
+        shields::escudos
+        scr.shake::scr.shake
+        scr.flash::scr.flash
+        lang::lingua
+        on::com
+        off::sem
+        mod::modf
+        none::nenhum
+        -- PIECES
+        piece_0::peao
+        piece_1::cavalo
+        piece_2::bispo
+        piece_3::torre
+        piece_4::rainha
+        piece_5::rei
+        piece_6::mestre
+        piece_7::todas
+        piece_8::Lider
+        
+        -- SHORT PIECE ( length must be <=6 )
+        short_piece_0::peao
+        short_piece_1::cavalo
+        short_piece_2::bispo
+        short_piece_3::torre
+        short_piece_4::rainha
+        short_piece_5::rei
+        short_piece_6::mestre
+        
+        -- DIFFICULTY
+        Easy::Moleza
+        Normal::Normalzin
+        Hard::Eita
+        Very Hard::Lascou
+        King::MESTRE
+        
+        -- INTRO
+        vig_1::O Rei Escurido tinha sido um governante extravagante e desagradavel. Com o passar dos anos, mais e mais de seus suditos foram conquistados pelo Rei Branquido, que oferecia salarios mais altos e trabalho genuinamente decente. E entao eles tomaram seu castelo. Seus Cavaleiros renunciaram ao seu posto. Ate sua esposa, a Rainha, o abandonou.
+        vig_2::Antes de partir, o ultimo Bispo Escurido veio ao Rei Escurido e disse-lhe: "Tu tens sido um rei pessimo, mas teu reinado ainda e santo. Melhor reter direito sobre as almas de teus antigos suditos, e ainda podemos ter motivos para temer tua ira. Assim, atende ao meu aviso. A ira de um homem, por mais piedoso que sejas, es sempre sua ruina"
+        vig_3::... sem uma Torre em seu nome...sem uma rainha ao seu lado... Tudo o que lhe restava era sua espingarda Arregassadora, os fragmentos de sua dignidade e os fogos crescentes da ira profetizada."Sempre foi minha ruina? NAO!! O que mais exatamente eu poderia perder?! NADA!" disse o Rei em sua loucura sombria.Entao o Rei, carregou sua espingarda e foi ao encontro de seu xeque-mate final.
+        
+        -- TRANSITION 4 or 5
+        vig_4::\"Tantos anos planejando... Tanto trabalho para faze-los se sentir bem-vindos e seguros... Tudo reduzido a cacos de vidro por um FILHO DA PUTA real com DROGA de espingarda\". O Rei Branco nao permitiria isso, nem mais um andar. Literalmente explodindo de raiva, ele apareceu para esmagar esse maniaco egoista.
+        vig_5::...MAS EU AINDA NAO DESISTI!!!
+        
+        -- ENDING 6-7
+        vig_6::E foi assim que a ira do Rei Negro finalmente o levou A vitoria. Sua vez de roubar os castelos e suditos do Rei Branco! Eles teriam que suportar seu terrivel governo mais uma vez...
+        vig_7::\"Se alegrem, corja de IMUNDOS e TRAIDORES!\" ele diria a eles, \"pelo menos voces nao foram explodidos em pedacos!\" enquanto ele segurava sua espingarda e ria. Invicto, ele nao tinha aprendido nada. Nao demoraria muito para que um novo Rei Branco surgisse e toda a historia comecasse de novo.
+        
+        -- SECRET ENDING 8,9,10,11,12
+        vig_8::\"Hah! Quem esta desfeito agora!!\" o Rei da Espingarda gritou. Mas assim que o bispo morreu, o livro saiu de suas maos e desceu do tabuleiro para o porto seguro do ceu...
+        vig_9::\"Nao tao rapido.\" Com sua espingarda ja carregada, o Rei mirou...
+        vig_10::... e explodiu o livro, transformando-o em uma massa de paginas esvoacantes e rasgadas. \"Palavras sagradas minha pika!\" ele disse: \"Ninguem e mais santo do que eu e esta espingarda aqui!!\" segurando com uma mao a espingarda e a outra em seus testiculos.
+        vig_11::\"Cheer up!\" he would tell them, \"at least thou didn\'t get blown to pieces!\" as he upheld his shotgun and laughed. Undefeated, he had learned nothing. It wouldn\'t be too long before a new White King rises up and the whole story starts anew.
+        vig_12::\"Se alegrem, corja de IMUNDOS e TRAIDORES!\" ele diria a eles, \"pelo menos voces nao foram explodidos em pedacos!\" enquanto ele segurava sua espingarda e ria. Invicto, ele nao tinha aprendido nada. Nao demoraria muito para que um novo Rei Branco surgisse e toda a historia comecasse de novo.
+        
+        -- PLURALS
+        child:s:children
+        man:s:men
+        *:s:s</h1>
+    
+</body>
+</html>

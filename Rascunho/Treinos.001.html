@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprestimos AULASEVEN</title>
+    <style>
+        h1{
+            color: blue;
+            font: Normal 20pt Times;  
+        }
+        body {
+            background-color: rgb(99, 99, 99);
+            color: #000000;
+            font: bold 15pt arial;
+            }
+        p {
+            color: rgb(116, 0, 0);
+            font: normal 13pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emprestimos AULASEVEN</h1>
+
+    
+    <script>
+        var nome1
+        = (window.prompt('Oi, como deseja ser chamado(a)?'))
+        window.alert(`Olá ${nome1}, é um prazer dispor de nossos servirços de emprestimo!`)
+        var v1 
+        = Number(window.prompt('Digite TODOS os seus fundos atuais:'))
+        var v2 
+        = Number(window.prompt('Agora, nos conte quanto você precisa para alcançar sua meta:'))
+        var v3
+        = Number(window.prompt('Alguma futura adição já estipulada?'))
+        var s0
+        = v1 + v2
+        var ser
+        = 10
+        var s1 = s0 + ser
+        document.write(`
+        |Oque você tem: ${v1.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}.<br>
+        |Somados ao oque você irá receber: ${v2.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}.<br>
+        |Tarifa de serviço: ${ser.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}.<br>
+        |Total: ${s1.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}.<br>
+        |Sr.${nome1.toUpperCase()}, os dados conferem?]`)
+        
+
+
+    </script>
+    
+    <p>([Pagar em pix])<br></p>
+    
+</body>
+</html>
